@@ -1,16 +1,27 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
     "outDir": "dist",
-    "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true,
-    "module": "CommonJS",
-    "target": "es5",
-    "jsx": "react",
-    "allowJs": true,
+    "module": "esnext",
+    "lib": ["dom", "esnext", "ES6"],
     "moduleResolution": "node",
-    "declaration": true,
-    "esModuleInterop": true
+    "skipLibCheck": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "declaration": true
   },
-  "include": ["src", "src/declarations.d.ts"],
-  "exclude": ["node_modules", "dist", "./src/stories"]
+  "include": ["src/declarations.d.ts", "src/**/*"],
+  "exclude": ["node_modules", "dist", ".storybook", "src/stories"]
 }

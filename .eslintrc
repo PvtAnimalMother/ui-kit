@@ -2,16 +2,13 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "airbnb/hooks",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:react/recommended"
   ],
   "rules": {
     "quotes": "off",
     "linebreak-style": "off",
+    "react/display-name": "off",
     "react/prop-types": "off",
     "react/button-has-type": "off",
     "react/jsx-props-no-spreading": "off",
@@ -28,6 +25,17 @@
     "document": true
   },
   "parserOptions": {
-    "project": ["./tsconfig.json"]
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "legacyDecorators": true,
+      "jsx": true,
+      "modules": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

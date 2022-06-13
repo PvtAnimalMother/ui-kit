@@ -10,6 +10,15 @@ module.exports = {
     libraryTarget: "umd",
     clean: true,
   },
+  output: {
+    filename: "index.js",
+    path: path.resolve(__dirname, "dist"),
+    library: "ui-kit",
+    libraryExport: "default",
+    libraryTarget: "umd",
+    umdNamedDefine: true,
+    globalObject: "this",
+  },
   externals: {
     react: "react",
   },
@@ -19,10 +28,6 @@ module.exports = {
         test: /\.(ts|tsx)?$/,
         use: ["babel-loader", "ts-loader"],
         exclude: /node_modules/,
-      },
-      {
-        test: /\.bundle\.ts$/,
-        use: "bundle-loader",
       },
       {
         test: /\.(svg|png|gif|jpg)$/,

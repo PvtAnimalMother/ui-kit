@@ -1,0 +1,20 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recomended",
+    "plugin:@typescript-eslint/eslnt-recomended",
+    "airbnb-rypescript"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "linebreak-style": "off",
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/no-implied-eval": "off",
+    "@typescript-eslint/no-throw-literal": "off"
+  },
+  "globals": {
+    "window": true,
+    "document": true
+  }
+}

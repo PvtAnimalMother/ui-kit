@@ -28,5 +28,5 @@
     }
   },
   "include": ["src/declarations.d.ts", "src/**/*"],
-  "exclude": ["node_modules", "dist", ".storybook", "src/stories"]
+  "exclude": ["node_modules", "dist", ".storybook"]
 }

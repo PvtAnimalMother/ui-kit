@@ -1,8 +1,8 @@
 import React from 'react';
 import './button.css';
-import { css } from '@emotion/react';
+import a from 'components';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
@@ -35,6 +35,7 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
+  console.log(a);
   const mode = primary
     ? 'storybook-button--primary'
     : 'storybook-button--secondary';

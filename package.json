@@ -34,7 +34,6 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
-    "babel-plugin-storybook-addon-pseudo-states-emotion": "^0.2.3",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "react": "^18.2.0",
@@ -47,9 +46,9 @@
     "webpack-cli": "^4.10.0"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.9.3",
     "react": "*",
-    "react-dom": "*",
-    "@emotion/react": "^11.9.3"
+    "react-dom": "*"
   },
   "files": [
     "dist"

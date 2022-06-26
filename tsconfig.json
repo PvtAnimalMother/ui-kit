@@ -6,7 +6,8 @@
     "lib": ["dom", "esnext", "ES6"],
     "moduleResolution": "node",
     "skipLibCheck": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "sourceMap": true,
     "resolveJsonModule": true,
     "strict": true,
@@ -20,7 +21,11 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "target": "es6",
-    "declaration": true
+    "declaration": true,
+    "baseUrl": "./",
+    "paths": {
+      "components": ["src/components/"]
+    }
   },
   "include": ["src/declarations.d.ts", "src/**/*"],
   "exclude": ["node_modules", "dist", ".storybook", "src/stories"]

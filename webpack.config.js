@@ -1,50 +1,51 @@
-const path = require("path");
-const ESLintPlugin = require("eslint-webpack-plugin");
+const path = require('path');
 
 module.exports = {
-  mode: "production",
-  entry: "./src/index.ts",
+  mode: 'production',
+  entry: './src/index.ts',
   output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
-    libraryTarget: "umd",
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
     clean: true,
   },
   output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
-    library: "ui-kit",
-    libraryExport: "default",
-    libraryTarget: "umd",
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'ui-kit',
+    libraryExport: 'default',
+    libraryTarget: 'umd',
     umdNamedDefine: true,
-    globalObject: "this",
+    globalObject: 'this',
   },
   externals: {
-    react: "react",
+    react: 'react',
   },
   module: {
     rules: [
       {
         test: /\.(ts|tsx)?$/,
-        use: ["babel-loader", "ts-loader"],
+        use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/,
       },
       {
         test: /\.(svg|png|gif|jpg)$/,
-        use: "file-loader",
+        use: 'file-loader',
       },
       {
         test: /\.(ttf|eot|woff|woff2)$/,
-        use: "file-loader",
+        use: 'file-loader',
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
-  plugins: [new ESLintPlugin({ extensions: ["ts", "tsx"] })],
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+    },
   },
 };

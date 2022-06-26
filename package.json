@@ -4,9 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "clean": "shx rm -rf dist",
-    "publish": "webpack && npm version patch && npm publish",
-    "build": "npm run clean && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -25,44 +23,38 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.17.12",
-    "@storybook/addon-actions": "^6.5.8",
-    "@storybook/addon-essentials": "^6.5.8",
-    "@storybook/addon-interactions": "^6.5.8",
-    "@storybook/addon-links": "^6.5.8",
-    "@storybook/builder-webpack5": "^6.5.8",
-    "@storybook/manager-webpack5": "^6.5.8",
-    "@storybook/react": "^6.5.8",
-    "@storybook/testing-library": "^0.0.12",
-    "@types/node": "^17.0.42",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
-    "@types/webpack": "^5.28.0",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
+    "@emotion/babel-plugin": "^11.9.2",
+    "@react-theming/storybook-addon": "^1.1.6",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
-    "bundle-loader": "^0.5.6",
+    "babel-plugin-storybook-addon-pseudo-states-emotion": "^0.2.3",
     "css-loader": "^6.7.1",
-    "eslint": "^8.2.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "shx": "^0.3.4",
     "style-loader": "^3.3.1",
-    "ts-loader": "^9.3.0",
-    "typescript": "^4.7.3",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
     "webpack": "^5.73.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.10.0"
   },
   "peerDependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "@emotion/react": "^11.9.3"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@emotion/react": "^11.9.3"
+  }
 }

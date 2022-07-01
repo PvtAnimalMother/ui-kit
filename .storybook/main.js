@@ -8,6 +8,9 @@ module.exports = {
     '@storybook/addon-interactions',
     '@react-theming/storybook-addon',
   ],
+  features: {
+    previewMdx2: true,
+  },
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-webpack5',

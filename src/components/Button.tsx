@@ -1,7 +1,11 @@
-import a from 'components';
+import { ReactJSXElement } from '@emotion/react/types/jsx-namespace';
 
 const Button = () => {
-  return <div>Button</div>;
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
 };
 
 export default Button;

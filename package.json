@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "scripts": {
     "clean": "shx rm -rf dist",
-    "publish": "webpack && npm version patch && npm publish",
-    "build": "npm run clean && webpack",
-    "storybook": "start-storybook -p 6006",
+    "publish": "webpack --env stage=build && pnpm version patch && pnpm publish",
+    "build": "pnpm run clean && webpack --env stage=build",
+    "storybook": "npx webpack --env stage=development && start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "repository": {

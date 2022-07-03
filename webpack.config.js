@@ -1,7 +1,7 @@
 const path = require('path');
 
-module.exports = {
-  mode: 'production',
+module.exports = (env) => ({
+  mode: 'none',
   entry: './src/index.ts',
   output: {
     filename: 'index.js',
@@ -25,22 +25,18 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)?$/,
-        use: ['babel-loader', 'ts-loader'],
+        use: [
+          'babel-loader',
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile:
+                env.stage === 'build' ? 'tsconfig.build.json' : 'tsconfig.json',
+            },
+          },
+        ],
         exclude: /node_modules/,
       },
-      // {
-      //   test: /\.(ts|tsx)?$/,
-      //   use: [
-      //     {
-      //       loader: 'ts-loader',
-      //       options: {
-      //         configFile: 'tsconfig.json',
-      //       },
-      //     },
-      //     'babel-loader',
-      //   ],
-      //   exclude: /node_modules/,
-      // },
       {
         test: /\.(svg|png|gif|jpg)$/,
         use: 'file-loader',
@@ -61,4 +57,4 @@ module.exports = {
       components: path.resolve(__dirname, 'src/components/'),
     },
   },
-};
+});

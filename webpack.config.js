@@ -1,5 +1,4 @@
 const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -29,6 +28,19 @@ module.exports = {
         use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/,
       },
+      // {
+      //   test: /\.(ts|tsx)?$/,
+      //   use: [
+      //     {
+      //       loader: 'ts-loader',
+      //       options: {
+      //         configFile: 'tsconfig.json',
+      //       },
+      //     },
+      //     'babel-loader',
+      //   ],
+      //   exclude: /node_modules/,
+      // },
       {
         test: /\.(svg|png|gif|jpg)$/,
         use: 'file-loader',
